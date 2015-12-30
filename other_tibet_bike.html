@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>attention</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #333;
+  background-color: #EFEFEF;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  color: #1E88E5;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>准备</h2>
+<h3>锻炼身体：</h3>
+<p>在出发前，提前一个月要做好适应性训练。每天坚持锻炼，最好保持每天骑车1-2小时，最好来几次100公里以上的实地练习，可以充分了解自己的速度和体力。</p>
+<h3>练习修车：</h3>
+<p><strong>调节变速</strong>、<strong>调节刹车<strong>、</strong>换台补胎</strong>，是三个最基本并需要掌握的技能。</p>
+<h3>约伴：</h3>
+<p>约伴最好是找合得来，并且和自己体力相差不多。不建议一个人单独骑行，也不建议太多人。人多是非多，住宿也麻烦。2-4人为最佳。</p>
+<h2>自行车运输</h2>
+<h3>关于打包：</h3>
+<p>打包最好是自己来，但需要了解简单的拆卸组装技术。包装箱推荐原装自行车包装箱，车行都有不少，价格5-20元，熟人或嘴甜的可以很容易免费要来（如果就在这家车行买的车，包装箱应该免费提供）。</p>
+<h3>飞机：</h3>
+<p>做飞机只要不超过20公斤都可以免费托运（稍多1-2公斤一般不会计较，不排除个别机场特别严格，比如乌鲁木齐机场）。</p>
+<h3>火车：</h3>
+<p>目前铁路公司禁止自行车上火车了，可以到火车站托运处办理随火车托运，可以整车托运也可以打包托运（整车托运最好先包好棱角，小心爱车受损）。到站后去取行李。</p>
+<h3>客车：</h3>
+<p>客车一般都可以整车托运，可以看情况讲价，一般都不超过半张票钱。</p>
+<h3>邮寄：</h3>
+<p>先联系好出发地的车行或者客栈帮忙签收，自己打包后联系快递公司邮寄。需要提前算好出发日期。</p>
+<h2>高原反应</h2>
+<h3>关于高原反应：</h3>
+<p>高原反应是指人到达一定海拔高度后，身体为适应因海拔高度带来的气压差、含氧量少、空气干燥等变化，而产生的一系列自然生理反应。  
+</p>
+<blockquote>
+<p>高原反应症状普遍出现在超过海拔2700米以后。快速（如乘飞机）到达3000米以上时，更容易发生高原反应。<br />
+高原反应一般发生在到达高海拔6-12小时后，少数在1-3天后发生，一般3-7天内恢复，情况严重的恢复时间可达2周以上。</p>
+</blockquote>
+<h3>准备工作：</h3>
+<p>进入高原前最好戒烟戒酒，避免上呼吸道感染，可以适当服用西洋参，红景天，以增强机体的抗缺氧能力。如果有呼吸道感染，应治愈后再进入高原。  
+</p>
+<blockquote>
+<p><strong>PS：</strong>严重贫血和高血压，心脏病人，切勿盲目进入高原。</p>
+</blockquote>
+<h3>到达高原：</h3>
+<p>初到高原理论上每人多少都一点反应，只是程度和表现方式不同。首先心里不要恐惧，如果正确地保护自己，过几天就会适应。<br />
+平时要多吃碳水化合物，易消化的食品，多喝水，多吃水果蔬菜，最好不要吸烟喝酒。</p>
+<h3>高反症状：</h3>
+<p>最普遍的是头痛，心慌气短，手脚发软，恶心呕吐，拉肚子。<br />
+严重者会出现胸闷、剧烈咳嗽、呼吸困难、咳粉红色泡沫痰，或反应迟钝、神志淡漠、甚至昏迷。</p>
+<h3>应对措施：</h3>
+<p>首先所有药都不能治疗高反，只能缓解高反。有效的应急药物有携氧片，和高原安。  
+</p>
+<p>情况不严重则就地休息，吃药，有条件的可以吸氧。<br />
+严重者尽快到附近医院进行治疗，或尽快转移到低海拔地区。  
+</p>
+<h2>其他</h2>
+<h3>遇到狗</h3>
+<p>沿途牧民大多都会养狗且凶狠，还有不少流浪狗。遇到被狗追被狗咬的情况，首先不要表现出害怕。追的凶了捡石头，使劲打，千万不要怕狗，你越怂它越凶。</p>
+<blockquote>
+<p>如果不幸被咬，立即用肥皂水和清水反复清理伤口，伤口不要包扎，保持暴露并尽快就医。</p>
+</blockquote>
+<h3>遇到小孩</h3>
+<p>川藏线的小孩已经变成了“拦路虎”，以前是单兵作战，现在集团作战。手拉手堵路，要东西，甚至抢东西偷东西。如果遇到“小孩军队”建议等人多了一起冲过去。（相信小朋友们的本质还是善良的，这种行为不过是环境和教育等多方面原因造成的）  
+</p>
+<blockquote>
+<p>虽然糖果是“打发”小孩的利器，但是很容易助长这种不良风气。不推荐给小孩糖果和铅笔等，如果想捐赠可以联系当地政府和学校等机构。</p>
+</blockquote>
+<h3>关于搭车</h3>
+<p>如果遇到身体不适和路途危险不要逞强，可以选择搭车或修整。</p>
+<p>如果是因为体力不好，或骑不动想放弃，建议最好不要搭车，因为搭车会成瘾。可以适当休整或根据体力重新规划路程。</p>
+<h2>民族风俗</h2>
+<h3>吃饭</h3>
+<p>在西藏，马肉、驴肉和狗肉是从来不吃的。有些地方的藏民连鱼肉都不吃。因为藏族人认为狗和马是通人性的，是不能吃的；而驴被视为一种很不干净的东西，也不会食用。所以，在西藏千万不能提起吃驴肉、狗肉等事情。  
+</p>
+<h3>做客</h3>
+<p>要是去藏族人家里做客或藏族进旅店，切记不可用脚踩门槛，并不能随便抚摸藏族人的头顶，不要随意讨论关于信仰等话题。</p>
+<h3>三口一杯</h3>
+<p>三口一杯是藏民族在会客时最主要的一种礼节。三口一杯的程序大概为这样：客人先用右手无名指沾点酒，向空中、半空、地上弹三下，以示敬天、地和祖先（或者敬佛法僧三宝），然后小喝一口，主人会把杯子倒满，再喝一口，主人又会把杯子倒满，这样喝完三次，最后把杯子中的酒喝完。这样做，主人才觉得客人看得起他，客人喝得越多，主人就越高兴。说明主人的酒酿得好。藏民族敬酒时，对男客一般用大杯或大碗，敬女客则用小杯或小碗。</p>
+<h3>寺庙</h3>
+<p>西藏主要的旅游景点是寺庙。目前，西藏对游客开放的很多寺庙都是藏传佛教寺庙，藏民族普遍信仰藏传佛教。所以，在转经时一定要按<strong>顺时针</strong>方向行走，切不可逆时针方向行走。很多藏族老者在转经的时候，身后会跟着一些挂着红绸子的羊，这种羊被称做“放生羊”，不可对这些羊进行骚扰。同时，在寺庙佛殿之内，不可大声喧哗和随意触摸佛像，在没有允许的情况下，更不能在佛殿内录像、照相等。</p>
+<h3>哈达</h3>
+<p>献“哈达”的动作因人而异，一般来说，要用双手捧哈达，高举与肩平，然后再平伸向前，弯腰给对方，这时，哈达正与头顶平，这表示对对方尊敬和最大的祝福 ——吉祥如意。对方以恭敬的姿态用双手平接。对尊者、长辈献哈达时要双手举过头，身体略向前倾，将哈达捧到座前或足下；对平辈或下属，则可以系在他们的颈上。献哈达在西藏十分普遍，甚至人们互相通信时，也在信封内附上一条小哈达，以示祝福和问候。特别有趣的是，藏民出门时也随身带上几条哈达，以备在途中遇到久别的亲戚、朋友时使用。</p>
+<h3>天葬</h3>
+<p>天葬是蒙古族、藏族等少数民族的一种传统丧葬方式，人死后把尸体拿到指定的地点让鹰（或者其他的鸟类、兽类等）吞食，天葬核心是灵魂不灭和轮回往复，死亡只是不灭的灵魂与陈旧的躯体的分离，是异次空间的不同转化，西藏人推崇天葬，是认为拿“皮囊”来喂食秃鹫，是最尊贵的布施，体现了大乘佛教波罗蜜的最高境界—舍身布施。</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

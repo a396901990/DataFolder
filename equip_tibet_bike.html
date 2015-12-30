@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EQUPE</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+  body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #333;
+  background-color: #EFEFEF;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  }
+
+  body>*:first-child {
+  margin-top: 0 !important;
+  }
+
+  body>*:last-child {
+  margin-bottom: 0 !important;
+  }
+
+  /* BLOCKS
+  =============================================================================*/
+
+  p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+  }
+
+  /* HEADERS
+  =============================================================================*/
+
+  h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  }
+
+  h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+  }
+
+  h1 {
+  font-size: 28px;
+  color: #000;
+  }
+
+  h2 {
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  color: #1E88E5;
+  }
+
+  h3 {
+  font-size: 14px;
+  }
+
+  h4 {
+  font-size: 14px;
+  }
+
+  h5 {
+  font-size: 14px;
+  }
+
+  h6 {
+  color: #777;
+  font-size: 14px;
+  }
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>必备装备</h2>
+<p><strong>自行车：</strong>推荐1000以上的品牌山地自行车，碟刹V刹车均可。不推荐小轮车，便携车，二八大杠，公路车等。  
+</p>
+<p><strong>货架：</strong>选择质量好的钢货架，不建议铝合金。  
+</p>
+<p><strong>驮包：</strong>根据装备多少选择合适大小驮包，要求防水（或配防雨罩），质量一定要过关。  
+</p>
+<p><strong>头盔：</strong>推荐购买有质量保证的品牌头盔。  
+</p>
+<p><strong>手电筒：</strong>推荐强光手电，过隧道，走夜路，晚上上厕所都能用到。  
+</p>
+<h2>推荐装备</h2>
+<p><strong>码表：</strong>记录行程，查看速度，可以合理分配体力。预算充足推荐西格玛。</p>
+<p><strong>水壶、水壶架：</strong>推荐一个750ML以上可以装开水的水壶，其余可用脉动瓶子替代。根据具体情况配相应水壶架。</p>
+<p><strong>魔术头巾：</strong>遮阳，挡灰，防嗮，防风，卖骚。强烈建议准备两条，一条面纱防灰，一条头巾防晒。</p>
+<p><strong>骑行手套：</strong>推荐长指，短指各备一双。也可以再备一双抓绒手套（冬季骑行推荐滑雪手套）。</p>
+<p><strong>束腿带：</strong>如果不是紧身骑行裤，推荐至少一条（右腿），可DIY。</p>
+<p><strong>腰包，车前包，前杠包：</strong>根据个人情况进行选择，如果带单反推荐购买单反专用车前包。</p>
+<p><strong>太阳镜，骑行眼镜：</strong>高原地区光线，紫外线强烈，另有防风，防沙，防飞虫等功能。近视眼可选择墨镜挂片。</p>
+<p><strong>车座，坐垫，骑行裤：</strong>长途骑行很伤屁股，推荐硅胶坐垫、座套或骑行裤。</p>
+<p><strong>护膝：</strong>长时间骑行很伤膝盖，强烈推荐护膝一对。</p>
+<p><strong>遮阳帽：</strong>先带遮阳帽再带头盔，帅气又实用。</p>
+<p><strong>车锁：</strong>以防万一，建议带上，必要时可以打狗。</p>
+<h2>修车工具</h2>
+<p><strong>便携打气筒：</strong>可和队友共用，保证质量，确保可以打足气。</p>
+<p><strong>内胎：</strong>推荐内胎每人至少带两个，一路上经常扎胎，扎胎时换新胎，到休息点时再补胎。</p>
+<p><strong>外胎：</strong>团队保证2-5人中有一条，防止爆胎。</p>
+<p><strong>补胎工具：</strong>推荐补胎套装（撬棒，锉刀，补胎片，补胎胶水）。</p>
+<p><strong>修车工具：</strong>推荐多功能修车套装（内角扳手，外角扳手，套筒扳手，螺丝刀）。团队可以另备尖锥钳，老虎钳各一个。</p>
+<p><strong>刹车皮（V刹）：</strong>至少带2对，全程下坡又多又长，很费刹车。</p>
+<p><strong>来令片（碟刹）：</strong>碟刹很少出问题，以防万一可以团队备1-2对。</p>
+<p><strong>刹车线，变速线：</strong>很少有损坏情况，团队备1-2套就可以。</p>
+<p><strong>链条油：</strong>链条油分干性，湿性，根据具体情况来准备。（油每次不易多，容易沾灰和泥）</p>
+<p><strong>截链器，魔术扣，链条：</strong>只要正确换挡，很少有断链情况。以防万一可以团队备一份。</p>
+<p><strong>辐条，辐条扳手：</strong>很少出问题，而且修辐条是技术活，团队可以备一份。</p>
+<p><strong>备用螺丝，铁丝：</strong>若干。</p>
+<h2>可选装备</h2>
+<p><strong>行李绑绳：</strong>如果装备过多可以用上。</p>
+<p><strong>挡泥板：</strong>前挡泥板作用不大，不是特别在意驮包是否干净的后挡泥板也可以不不要。而且挡泥板影响美观，增加重量。</p>
+<p><strong>套袖，腿套：</strong>主要配合骑行服防嗮。</p>
+<p><strong>车尾灯，青蛙灯：</strong>主要为了夜骑安全。</p>
+<p><strong>车铃：</strong>很少能用上。</p>
+<p><strong>对讲机：</strong>如果和队友体力相差巨大可以选择，以便保持通讯。</p>
+<p><strong>抓绒睡袋：</strong>爱干净的可以带一个抓绒，平时住宿时拿出来给自己铺床。</p>
+<p><strong>音响：</strong>和队友列队骑行，配上动感音乐，越骑越有劲。</p>
+<p><strong>运动摄像机：</strong>绑在头盔上，可记录下沿途的美景和精彩瞬间。（条件允许推荐GoPRO）</p>
+<p><strong>GPS，海拔仪：</strong>用处不大。</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
